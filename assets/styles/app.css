@@ -2,6 +2,5 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
-    background-color: lightgray;
-}
+/*Styles Backoffice*/
+@import "backoffice/backoffice-base.css";
