@@ -15,11 +15,7 @@ Encore
   //.setManifestKeyPrefix('build/')
 
   //postcssLoader
-  .enablePostCssLoader((options) => {
-    options.postcssOptions = {
-      config: "./.postcss.config.js",
-    };
-  })
+  .enablePostCssLoader()
 
   /*
    * ENTRY CONFIG
