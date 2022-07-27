@@ -4,13 +4,10 @@
 
 {% block body %}
 
- 
+<div class="container mx-auto mt-4">
 
-
-<div class="container md:container md:mx-auto mt-4">
-
-    <h1 class="font-inria-serif text-4xl">Contact</h1>
-    <p class="font-inria-serif mt-8">Pour toutes questions et informations, veuillez nous contacter afin de vous répondre au mieux.</p>
+    <h1 class="font-inria-serif text-4xl text-center md:text-left">Contact</h1>
+    <p class="font-inria-serif mt-8 text-center md:text-left">Pour toutes questions et informations, veuillez nous contacter afin de vous répondre au mieux.</p>
     
     <div class="mt-20">
         {% for message in app.flashes('success') %}
@@ -23,35 +20,35 @@
 
          {{ form_errors(form) }}
 
-        <div class="flex flex-row  gap-56 mb-5 justify-between ">
-            <div class="w-full">
+        <div class="flex w-full  flex-col md:flex-row  md:gap-14 mb-5 justify-between ">
+            <div class="w-full mt-5 md:mt-0">
                 {{ form_label(form.prenom, 'Prénom :', { 'label_attr': {'class':'control-label'}}) }}
                 {{ form_widget(form.prenom, { 'attr': {'class':'control-input'}}) }}
             </div>
-            <div class="w-full">
+            <div class="w-full mt-5 md:mt-0">
                 {{ form_label(form.nom, 'Nom :', { 'label_attr': {'class':'control-label'}}) }}
                 {{ form_widget(form.nom, { 'attr': {'class':'control-input'}}) }}
             </div>
         </div>
 
-        <div class="flex  flex-row gap-56 mt-5 mb-16 justify-between ">
-            <div class="w-full">
+        <div class="flex flex-col w-full  md:flex-row md:gap-14 mt-5 mb-16 justify-between ">
+            <div class="w-full mt-2 md:mt-0">
                 {{ form_label(form.email, 'Adresse email :', { 'label_attr': {'class':'control-label'}}) }}
                 {{ form_widget(form.email, { 'attr': {'class':'control-input'}}) }}
             </div>
-            <div class="w-full">
+            <div class="w-full mt-5 md:mt-0">
                 {{ form_label(form.mobile, 'Numéro de mobile :', { 'label_attr': {'class':'control-label'}}) }}
                 {{ form_widget(form.mobile, { 'attr': {'class':'control-input'}}) }}
             </div>
         </div>
 
-        <div class="w-full">
+        <div class="w-full ">
             {{ form_label(form.message, 'Votre message :', { 'label_attr': {'class':'control-label'}}) }}
             {{ form_widget(form.message, { 'attr': {'class':'control-input'}}) }}
         </div>
        
 
-        <div class="flex flex-row mt-20 gap-8">
+        <div class="flex flex-row mt-20 gap-8 justify-center md:justify-start">
             <a class="btn-secondary" href="/">Annuler</a>
             <button class="btn-primary">{{ button_label|default('Envoyer') }}</button>
         </div>
@@ -60,4 +57,5 @@
 
 
 </div>
+
 {% endblock %}

@@ -9,11 +9,16 @@
 
 /*Pages */
 
-@import './contact.css';
 @import './navbar.css';
 @import './register.css';
 
 /* -------------- */
+
+/* Composants */
+@import './composants/footer.css'; 
+@import './composants/buttons.css'; 
+@import './composants/forms.css';
+
 
 /* body css */
 body {

@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["templates/**/*.html.twig", "assets/js/**/*.js"],
   theme: {
+    screens: {
+      'xs': '350px',
+      ...defaultTheme.screens,
+    },
     colors: {
       indigo: {
         100: "#cfdbec",
