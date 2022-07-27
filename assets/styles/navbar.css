@@ -1,0 +1,57 @@
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+font-family: "inter";
+font-size:15px;
+text-decoration: none;
+color: #000000;
+
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+padding: 12px 16px;
+z-index: 1;
+background: #86bff345;
+font-family: 'Inria Serif';
+
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+    font-family: 'Inria Serif';
+}
+.link-register{
+    color:#0F49A1;
+    font-family: 'inter';
+}
+.link-login{
+    color:#469297;
+    font-size: 17px;
+}
+.title-nav{
+    color: #000000;
+    font-family: 'inter';
+    font-size: 17px;
+}
+.logo{
+    width: 106px;
+    margin: 10px;
+}
+.fa-shopping-basket{
+    margin-right:30px;
+}
