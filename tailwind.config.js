@@ -69,6 +69,7 @@ module.exports = {
       "blue-btn": "#257087",
       "blue-footer": "#075C77",
       "blue-input": " #86BFF324",
+      "blue-login": "#2F7579", 
       "green-dark": " #0D700B",
       "green-light": "#84F55C61",
       "gray-input": "#EFEFEF",
