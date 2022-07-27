@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    <div class="title-head"><h1><span class="title">Inscription</span><br/><span class="title2">Création d'un compte</span></h1></div>
+
+    <p class="text-form">Veuillez remplir les informations afin de créer un compte Eyes Contact.</p>
+
+    <div>
+
+        <div class="tab-1">
+            <form>
+                <div class="input-form">
+                    <label for="firstname">Prénom</label>
+                    <input type="text">
+                </div>
+                
+                <div class="input-form">
+                    <label for="lastname">Nom de famille</label>
+                    <input type="text">
+                </div>
+
+                <div class="input-form">
+                    <label for="email">Adresse email</label>
+                    <input type="text">
+                </div>
+
+                <div class="input-form">
+                    <label for="mobile">Mobile</label>
+                    <input type="text">
+                </div>
+
+                <div class="input-form">
+                    <label for="password">Mot de passe</label>
+                    <input type="text">
+                </div>
+
+                <div class="input-form">
+                    <label for="password_confirm">Confirmation du mot de passe</label>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+
+        <div class="tab-2">
+
+            <p>Informations pour la livraison</p>
+
+            <label for="domicile">Rue de domicile</label>
+                <input type="text">
+                <label for="city">ville</label>
+                <input type="text">
+                <label for="number_domicile">Numéro de domicile</label>
+                <input type="text">
+                <label for="postal_code">Code postale</label>
+                <input type="text">
+
+        </div>
+
+        <div>
+            <p>Veuillez confirmez afin de recevoir des bons plans promo par email et SMS</p>
+            <p>En cliquant sur inscription, j'accepte les conditions d'utilisation générales d'adhésion de Eyes Contact.</p>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}
+
