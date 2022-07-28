@@ -1,8 +1,5 @@
 @layer components {
-    .hero{
-        @apply bg-[url('/public/images/product/hero-femme.png')] w-full bg-cover h-72 flex ;
-    }
-
+   
     .hero h1 {
         @apply font-inria-serif text-white text-5xl justify-center;
     }
