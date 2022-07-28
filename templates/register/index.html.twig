@@ -4,6 +4,12 @@
 
 {% block body %}
 
+{% block header %}
+
+    {% include "/navbar/index.html.twig" %}
+
+{% endblock header %}
+
 
 <div class="wrapper">
     <div class="title-head"><h1><span class="title">Inscription</span><br/><span class="title2">Création d'un compte</span></h1></div>
@@ -112,5 +118,12 @@
 
 
 </div>
+
+{% block footer %}
+
+    {% include "/footer/footer.html.twig" %}
+
+{% endblock footer %}
+
 {% endblock %}
 
