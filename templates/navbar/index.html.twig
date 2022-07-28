@@ -4,7 +4,7 @@
 
 
 <div class="navbar-menu">
-    <img class="logo" src="{{ asset('images/EYES_CONTACT.jpg')}}" alt="logo_eyes_contact">
+    <a class="link-content" href={{path('app_home')}}><img class="logo" src="{{ asset('images/EYES_CONTACT.jpg')}}" alt="logo_eyes_contact"></a>
 
     <div class="dropdown">
         <span class="title-nav">Lunettes de vue</span>
@@ -35,11 +35,11 @@
     </div>
 
     <div class="">
-       <a class="link-content" href=""><span class="title-nav">Contact</span> </a>
+       <a class="link-content" href={{path('app_contact')}}><span class="title-nav">Contact</span> </a>
     </div>
 
     <div class="link-log">
-        <a class="link-register" href="../register">Inscription</a> /
+        <a class="link-register" href={{path('app_register')}}>Inscription</a> /
         <a class="link-login" href="">Connexion</a>
     </div>
 
