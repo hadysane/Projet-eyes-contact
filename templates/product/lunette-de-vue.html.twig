@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+
+
+{% block body %}
+{# <pre>
+    {{ dump(data) }}
+</pre> #}
+
+{% include 'navbar/index.html.twig'%}
+
+<div class="hero ">
+    <div class="container mx-auto my-auto">
+        <h1>{{ title }}</h1>
+    </div>
+
+</div>
+
+<div class="container mx-auto mt-14">
+    <div class="columns-5">
+        {% for product in data %}
+            <div>
+                <img class="w-12 mb-5" src="{{ asset('images/product/lunette-de-vue.png')}}" alt="lunette-de-vue">
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'footer/footer.html.twig'%}
+{% endblock %}

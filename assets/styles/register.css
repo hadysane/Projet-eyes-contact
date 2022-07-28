@@ -24,11 +24,7 @@
     margin-top: 30px;
 }
 
-.input-form{
-    display:flex;
-    flex-direction: column;
-    width:105px;
-}
+
 
 form{
     display: flex;
@@ -36,4 +32,13 @@ form{
     align-content: center;
     margin: 10px;
     flex-wrap: wrap;
+}
+.text-form{
+    font-family:'Inria Serif';
+    font-size:18x;
+    margin:10px;
+    color:#0000008c;
+}
+.form-content{
+    margin:17px;
 }
