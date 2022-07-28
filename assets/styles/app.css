@@ -12,6 +12,7 @@
 @import './navbar.css';
 @import './register.css';
 @import './home.css';
+@import './dashboardClient.css';
 
 /* -------------- */
 
@@ -19,6 +20,7 @@
 @import './composants/footer.css'; 
 @import './composants/buttons.css'; 
 @import './composants/forms.css';
+
 
 
 /* body css */
