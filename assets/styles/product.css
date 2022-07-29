@@ -1,0 +1,6 @@
+@layer components {
+   
+    .hero h1 {
+        @apply font-inria-serif text-white text-5xl justify-center;
+    }
+}
