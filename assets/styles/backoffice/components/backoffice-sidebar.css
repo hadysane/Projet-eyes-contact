@@ -29,6 +29,9 @@
 #backoffice_sidebar_mainMenu ul li:hover, #backoffice_sidebar_mainMenu ul li.active{
     background:#075C77;
 }
+#backoffice_sidebar_mainMenu a:hover{
+    text-decoration:none;
+}
 
 .mainMenu_item{
     margin:0 auto;

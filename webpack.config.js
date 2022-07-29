@@ -23,7 +23,11 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
+
   .addEntry("app", "./assets/app.js")
+  .addEntry("backoffice-home", "./assets/backoffice-entries/backoffice-home.js")
+  .addEntry("backoffice-account-settings", "./assets/backoffice-entries/backoffice-account-settings.js")
+  .addEntry("backoffice-pagesList", "./assets/backoffice-entries/backoffice-pages-list.js")
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
