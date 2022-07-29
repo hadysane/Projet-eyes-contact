@@ -16,7 +16,10 @@ class ProductController extends AbstractController
         $articles_similaire = [
             ["name" => "Lunette de vue femme", "prix" => 75.00],
             ["name" => "Lunette de vue homme", "prix" => 75.00],
-            ["name" => "Lunette de vue enfant", "prix" => 75.00]
+            ["name" => "Lunette de vue enfant", "prix" => 75.00],
+            ["name" => "Lunette de vue enfant", "prix" => 75.00],
+            ["name" => "Lunette de vue enfant", "prix" => 75.00],
+            ["name" => "Lunette de vue enfant", "prix" => 75.00],
         ];
 
         return $this->render('product/product.html.twig', [
