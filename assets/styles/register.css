@@ -27,11 +27,10 @@
 
 
 form{
-    display: flex;
     justify-content: space-between;
     align-content: center;
-    margin: 10px;
-    flex-wrap: wrap;
+    margin: auto;
+    padding:19px;
 }
 .text-form{
     font-family:'Inria Serif';

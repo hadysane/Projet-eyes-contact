@@ -98,12 +98,14 @@ h2{
     font-family: 'Inria Serif';
     font-size: 22px;
     margin: 10px;
+    padding: 10px;
 }
 
 .tab01{
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:10px;
+    padding: 10px;
 }
 
 .input-tab{
@@ -137,8 +139,14 @@ h2{
 
 .text-img{
     color:#1479D5;
+    text-align: center;
 }
-
+.text-header{
+    font-size: 17px;
+    font-family: 'Inria Serif';
+    color: #000000;
+    margin: 10px;
+}
 .text-deco-profil{
     text-decoration: revert;
     cursor:pointer;
@@ -174,4 +182,35 @@ input #dashboard_client_category input #dashboard_client_type{
     font-size: 17px;
     color: #075C77;
     font-family: 'Inria Serif';
+}
+
+.btn-form{
+    text-align: center;
+    margin: 10px auto;
+}
+
+.btn-cancel{
+    background: #8080805e;
+    width: 27%;
+    height: 43px;
+    border-radius: 25px;
+    margin: 10px;
+    color: #504e4ee0;
+}
+.tab-03{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.details{
+    color: #808080b5;
+    font-family: 'Inria Serif';
+    font-size: 16px;
+}
+.price-info{
+    color: #000000cf;
+    font-size: 15px;
+    font-family: 'Inter';
 }
