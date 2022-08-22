@@ -43,59 +43,11 @@
         <a class="link-login" href={{path('app_login')}}>Connexion</a>
     </div>
 
-    <div class="nav-icons">
-        <div class="img-basket">
-            <a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>{# icon du panier  #}
-        </div>
-
-        <div class="bar-mobile">
-            <a class=" bar show"><i class="fa-solid fa-bars"></i> </a>
-            <a class="cross "><i class="fa-solid fa-xmark"></i></a>
-        </div>
+    <div class="img-basket">
+        <a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>{# icon du panier  #}
     </div>
 
-</div>
 
-{# mobile navbar #}
-
-<div class="dropdown-mobile">
-     <div class="dropdown-mobile-link">
-        <div class="mobile-title-nav">Lunettes de vue<i class="fa fa-angle-down" aria-hidden="true"></i>{# icon flèche du bas  #}</div>
-       
-        <div class="dropdown-mobile-link-content">
-            <a class="link-content" href={{path('app_lunette_de_vue_slug', {slug:"femmes"})}}><p>Femmes</p></a>
-            <a class="link-content" href={{path('app_lunette_de_vue_slug', {slug:"hommes"})}}><p>Hommes</p></a>
-            <a class="link-content" href={{path('app_lunette_de_vue_slug', {slug:"enfants"})}}><p>Enfants</p></a>
-        </div>
-        
-    </div>
-    <div class="dropdown-mobile-link">
-        <div class="mobile-title-nav">Lunettes de soleil <i class="fa fa-angle-down" aria-hidden="true"></i>{# icon flèche du bas  #}</div>
-            <div class="dropdown-mobile-link-content">
-                <a class="link-content" href={{path('app_lunette_de_soleil_slug', {slug:"femmes"})}}><p>Femmes</p></a>
-                <a class="link-content" href={{path('app_lunette_de_soleil_slug', {slug:"hommes"})}}><p>Hommes</p></a>
-                <a class="link-content" href={{path('app_lunette_de_soleil_slug', {slug:"enfants"})}}><p>Enfants</p></a>
-            </div>
-       
-    </div>
-    <div class="dropdown-mobile-link">
-        <div class="mobile-title-nav">Lentille <i class="fa fa-angle-down" aria-hidden="true"></i>{# icon flèche du bas  #}</div>
-        <div class="dropdown-mobile-link-content">
-            <a class="link-content" href={{path('app_lentille_slug', {slug:"femmes"})}}><p>Femmes</p></a>
-            <a class="link-content" href={{path('app_lentille_slug', {slug:"hommes"})}}><p>Hommes</p></a>
-            <a class="link-content" href={{path('app_lentille_slug', {slug:"enfants"})}}><p>Enfants</p></a>
-        </div>
-       
-    </div>
-
-    <div class="mobile-title-nav">
-       <a class="" href={{path('app_contact')}}><span>Contact</span> </a>
-    </div>
-    
-    <div class="mobile-link-log">
-        <a class="link-register" href={{path('app_register')}}>Inscription</a> /
-        <a class="link-login" href={{path('app_login')}}>Connexion</a>
-    </div>
 </div>
 {% endblock %}
 
