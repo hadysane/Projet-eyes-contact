@@ -82,7 +82,7 @@
 
         <div class="btn-form">
             <button class="btn-cancel">Annuler</button>
-            <button class="btn-primary" href="/order">{{ button_label|default('Confirmer le paiement') }}</button>
+            <a class="btn-primary" href={{path('app_order')}}>{{ button_label|default('Confirmer le paiement') }}</a>
         </div>
 
 
