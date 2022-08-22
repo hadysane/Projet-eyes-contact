@@ -28,6 +28,7 @@ Encore
   .addEntry("backoffice-home", "./assets/backoffice-entries/backoffice-home.js")
   .addEntry("backoffice-account-settings", "./assets/backoffice-entries/backoffice-account-settings.js")
   .addEntry("backoffice-pagesList", "./assets/backoffice-entries/backoffice-pages-list.js")
+  .addEntry("backoffice-pages-addUpdate-form", "./assets/backoffice-entries/backoffice-pages-addUpdate-form.js")
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")

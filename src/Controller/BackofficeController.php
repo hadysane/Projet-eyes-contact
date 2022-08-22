@@ -99,10 +99,58 @@ class BackofficeController extends AbstractController
      */
     public function addProduct(): Response
     {
-        return $this->render('backoffice/pagesAddForm/product.html.twig', [
+        return $this->render('backoffice/pagesAddForm/add-product.html.twig', [
             'controller_name' => 'BackofficeController',
         ]);
     }
 
-    
+    /**
+     * @Route("/add/variation", name="backoffice_variation_add", methods={"GET"})
+     */
+    public function addVariation(): Response
+    {
+        return $this->render('backoffice/pagesAddForm/add-variation.html.twig', [
+            'controller_name' => 'BackofficeController',
+        ]);
+    }
+
+    /**
+     * @Route("/add/category", name="backoffice_category_add", methods={"GET"})
+     */
+    public function addCategory(): Response
+    {
+        return $this->render('backoffice/pagesAddForm/add-category.html.twig', [
+            'controller_name' => 'BackofficeController',
+        ]);
+    }
+
+    /**
+     * @Route("/add/supplier", name="backoffice_supplier_add", methods={"GET"})
+     */
+    public function addSupplier(): Response
+    {
+        return $this->render('backoffice/pagesAddForm/add-supplier.html.twig', [
+            'controller_name' => 'BackofficeController',
+        ]);
+    }
+
+    /**
+     * @Route("/add/user", name="backoffice_user_add", methods={"GET"})
+     */
+    public function addUser(): Response
+    {
+        return $this->render('backoffice/pagesAddForm/add-user.html.twig', [
+            'controller_name' => 'BackofficeController',
+        ]);
+    }
+
+    /**
+     * @Route("/add/order", name="backoffice_order_add", methods={"GET"})
+     */
+    public function addOrder(): Response
+    {
+        return $this->render('backoffice/pagesAddForm/add-order.html.twig', [
+            'controller_name' => 'BackofficeController',
+        ]);
+    }
 }
