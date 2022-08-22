@@ -11,14 +11,14 @@
         <a class="font-inter text-grey-700" href="{{path('app_lunette_de_vue_all')}}">Lunttes de vue</a>  >  <a class="font-inter text-grey-700" href="{{path('app_lunette_de_vue_slug', {slug:"femmes"})}}" > Femme</a> > Lunette de vue Femme
     </div>
 
-    <h1 class="font-inter text-4xl mt-20"> {{product.name}}</h1>
+    <h1 class="font-inter text-4xl mt-20 mb-7"> {{product.name}}</h1>
 
-    <div class="flex gap-12">
-        <div class="w-full">
+    <div class="flex md:flex-row xs:flex-col gap-12">
+        <div class="w-full xs:mt-16 ">
             <img class="w-full" src="{{ asset('images/product-images/Lunettes_de_vue/lunette01.jpg')}}" alt="lunette01">
         </div>
 
-        <div>
+        <div class="mb-9">
             <div class="flex gap-14">
                 <div class="font-inter">
                     <p class="font-semibold mb-2">Prix</p>
@@ -43,17 +43,16 @@
                         m-0
                         focus:text-gray-700 focus:bg-white focus:border-blue-footer focus:outline-none" aria-label="Default select example">
                             <option selected>selectionner la quantité </option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="3">4</option>
+                            {% for i in 1..100 %}
+                                <option value="{{i}}">{{i}}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
             
             </div>
 
-            <div class="mt-20 mb-28 font-inter">
+            <div class="mt-20 mb-10 font-inter">
                 <p class="mb-3 font-semibold">Description</p>
 
                 <p> {{ product.description }} </p>
@@ -63,26 +62,81 @@
         </div>
     </div>
 
-    <div class="mt-32 flex flex-col justify-center align-middle">
+   <div class="mt-32">
 
         <h3 class="font-inria-serif text-2xl text-center mb-16">Articles similaires</h3>
 
-        <div class="main-tab">
-            {% for product in articles_similaire %}
-                <div class="card">
-                    <a href="{{path('app_product_show', {id: 1})}}">
-                        <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
-                        <h2 class="title-card">{{ product.name }}</h2>
-                        <p class="price">{{ product.prix }}€</p>
-                    </a>
-                    <button class="btn-card" type="submit">Ajouter</button>
-                </div>
-            {% endfor %}
+        <!-- Swiper -->
+        <div class=" swiper-container  mySwiper">
+             <div class="swiper-button-next"></div>
+            <div class="swiper-wrapper">
+                {% for product in articles_similaire %}
+                    <div class="swiper-slide">
+                        <div class="card">
+                                <a href="{{path('app_product_show', {id: 1})}}">
+                                    <img class="card-tab" src="{{ asset('images/product-images/Lunette_de_soleil/lunette01.jpg')}}" alt="lunette01">
+                                    <h2 class="title-card"> test </h2>
+                                    <p class="price">45.00€</p>
+                                </a>
+                                <button class="btn-card" type="submit">Ajouter</button>
+                            </div>
+                    </div>
+                {% endfor %}
+            </div>
+           
+            <div class="swiper-button-prev"></div>
         </div>
-
     </div>
-  
+        
 </div>
+  
 
-{% include 'footer/footer.html.twig' %}
+   
+
+
+
+{% block footer %}
+    {% include 'footer/footer.html.twig' %}
+{% endblock footer %}
+
+{% block script %}
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },breakpoints: {
+           200: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+        });
+
+    </script>
+  {% endblock script %}
+
 {% endblock %}

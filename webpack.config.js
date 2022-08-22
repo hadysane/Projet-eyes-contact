@@ -12,7 +12,7 @@ Encore
   // public path used by the web server to access the output path
   .setPublicPath("/build")
   // only needed for CDN's or sub-directory deploy
-  //.setManifestKeyPrefix('build/')
+  .setManifestKeyPrefix('build/')
 
   //postcssLoader
   .enablePostCssLoader()
@@ -57,6 +57,14 @@ Encore
     config.useBuiltIns = "usage";
     config.corejs = 3;
   });
+
+  if (Encore.isProduction()) {
+    Encore.setPublicPath(
+      "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    );
+
+    Encore.setManifestKeyPrefix("build/");
+  }
 
 // enables Sass/SCSS support
 //.enableSassLoader()
