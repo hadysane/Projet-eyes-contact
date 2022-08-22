@@ -12,14 +12,10 @@ Encore
   // public path used by the web server to access the output path
   .setPublicPath("/build")
   // only needed for CDN's or sub-directory deploy
-  //.setManifestKeyPrefix('build/')
+  .setManifestKeyPrefix('build/')
 
   //postcssLoader
-  .enablePostCssLoader((options) => {
-    options.postcssOptions = {
-      config: "./.postcss.config.js",
-    };
-  })
+  .enablePostCssLoader()
 
   /*
    * ENTRY CONFIG
@@ -27,7 +23,12 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
+
   .addEntry("app", "./assets/app.js")
+  .addEntry("backoffice-home", "./assets/backoffice-entries/backoffice-home.js")
+  .addEntry("backoffice-account-settings", "./assets/backoffice-entries/backoffice-account-settings.js")
+  .addEntry("backoffice-pagesList", "./assets/backoffice-entries/backoffice-pages-list.js")
+  .addEntry("backoffice-pages-addUpdate-form", "./assets/backoffice-entries/backoffice-pages-addUpdate-form.js")
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   .enableStimulusBridge("./assets/controllers.json")
@@ -61,6 +62,14 @@ Encore
     config.useBuiltIns = "usage";
     config.corejs = 3;
   });
+
+  if (Encore.isProduction()) {
+    Encore.setPublicPath(
+      "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    );
+
+    Encore.setManifestKeyPrefix("build/");
+  }
 
 // enables Sass/SCSS support
 //.enableSassLoader()
