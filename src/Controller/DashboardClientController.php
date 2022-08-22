@@ -23,7 +23,7 @@ class DashboardClientController extends AbstractController
             $subject = 'Enregistrement de vos données de ' . $dashboardClientFormData['email'];
             
             $content = '<br> <br> Message de ' . '<b>' . $dashboardClientFormData['email'] . ' '  . $dashboardClientFormData['adress'] . '</b>'. '<br> <br>'. 
-            'Numéro de téléphone : ' . $dashboardClientFormData['mobile'] . '<br> <br>'.$dashboardClientFormData['password'] . '<br> <br>'.$dashboardClientFormData['type'] . '<br> <br>'.$dashboardClientFormData['category'];
+            'Numéro de téléphone : ' . $dashboardClientFormData['mobile'] . '<br> <br>'.$dashboardClientFormData['password'];
 
             
             $mailer->sendEmail(

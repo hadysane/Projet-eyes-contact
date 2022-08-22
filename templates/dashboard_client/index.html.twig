@@ -143,13 +143,12 @@
           </div>
 
           <div class="tab">
-            <h2>Mon Compte</h2>
+            
             <div class="tab01">
-                
-                <div class="profile">
-                    <img class="card-tab" src="{{ asset('images/profil-client.jpg')}}" alt="lunette01">
-                    <a class="text-deco-profil" href=""><p class="text-img">Changer l'image </p></a>
-                </div>
+                <h2>Mon Compte</h2>
+                <img class="card-tab" src="{{ asset('images/profil-client.jpg')}}" alt="lunette01">
+                <p class="text-header">Informations personnelles</p>
+                <a class="text-deco-profil" href=""><p class="text-img">Changer l'image </p></a>
             </div>
             {# coordonnées du client #}
             <div class="tab02">
@@ -189,30 +188,40 @@
                             </div>
                         </div>
 
-                        <h2>Informations sur mes produits</h2>
-
                         
 
-                        <div class=" ">
-                            <div class="tab-list ">
-                            
-                                <div class="w-full">
-                                    {# {{ form_label(form.type, 'Type', { 'label_attr': {'class':'control-label'}}) }} #}
-                                    {# {{ form_widget(form.type, { 'attr': {'class':'input-tab'}}) }} #}
-                                </div>
-                                <div class="w-full">
-                                    {# {{ form_label(form.category, 'Categorie', { 'label_attr': {'class':'control-label'}}) }} #}
-                                    {# {{ form_widget(form.category, { 'attr': {'class':'input-tab'}}) }} #}
-                                </div>
-                            </div>
-                            
-                        </div>
             
                     
             
                     {{ form_end(form) }}
                 </div>
             </div>
+            <h2>Informations sur mes produits</h2>
+            <div class="tab-03">
+                
+                <div class="info-product">
+                    <p class="details">Lunette pour Homme</p>
+                    <p class="details">Marque : Dior</p>
+                    <p class="details">Couleur : Noir</p>
+                    <p class="details">Sur le site Eyes Contacts</p>
+                    <span class="price-info">75,00€</span>
+                </div>
+                <div class="info-product">
+                    <p class="details">Lunette pour Homme</p>
+                    <p class="details">Marque : Police</p>
+                    <p class="details">Couleur : Grid</p>
+                    <p class="details">Sur le site Eyes Contacts</p>
+                    <span class="price-info">84,00€</span>
+                </div>
+                <div class="info-product">
+                    <p class="details">Lunette pour Homme</p>
+                    <p class="details">Marque : Armany</p>
+                    <p class="details">Couleur : Dorée</p>
+                    <p class="details">Sur le site Eyes Contacts</p>
+                    <span class="price-info">58,00€</span>
+                </div>
+            </div>
+            
 
         
             </div>
@@ -227,6 +236,12 @@
             {# button delete #}
 
             <button class="btn-delete">Suppression du compte</button>
+
+            <div class="btn-form">
+
+                <button class="btn-cancel">Annuler</button>
+                <button class="btn-primary">{{ button_label|default('Enregistrer') }}</button>
+            </div>
             
           </div>
         </div>

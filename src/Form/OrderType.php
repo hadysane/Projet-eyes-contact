@@ -9,15 +9,18 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class DashboardClientType extends AbstractType
+class OrderType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', EmailType::class, ['required' => true])
-            ->add('adress', TextType::class, ['required' => false])
-            ->add('password', TextType::class, ['required' => true,])
-            ->add('mobile', TextType::class, ['required' => true,]);
+            ->add('home_street', TextType::class, ['required' => true,])
+            ->add('city', EmailType::class, ['required' => true])
+            ->add('postal_code', TextType::class, ['required' => false])
+            ->add('pays', TextType::class, ['required' => false])
+            ->add('number_card', TextType::class, ['required' => false])
+            ->add('secure_numb', TextType::class, ['required' => false])
+            ->add('date_expire', TextType::class, ['required' => false]);
     }
     public function configureOptions(OptionsResolver $resolver)
     {
